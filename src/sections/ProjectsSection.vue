@@ -63,7 +63,7 @@ const counts = computed(
       </p>
 
       <div data-reveal>
-        <TransitionGroup tag="ul" name="project" class="projects__grid" role="list">
+        <TransitionGroup tag="ul" name="project" class="projects__grid" role="list" data-skew>
           <li
             v-for="project in visibleProjects"
             :key="project.id"

@@ -1,5 +1,6 @@
 import { isNavigationFailure, NavigationFailureType, useRouter } from 'vue-router'
 import { renderAllSections } from './useProgressiveSections'
+import { getLenis } from './useSmoothScroll'
 
 const FALLBACK_NAV_HEIGHT = 72
 
@@ -17,6 +18,11 @@ export function preferredScrollBehavior(): ScrollBehavior {
 }
 
 export function scrollToElement(element: HTMLElement) {
+  const lenis = getLenis()
+  if (lenis) {
+    lenis.scrollTo(element, { offset: -getScrollOffset() })
+    return
+  }
   const top = element.getBoundingClientRect().top + window.scrollY - getScrollOffset()
   window.scrollTo({ top, behavior: preferredScrollBehavior() })
 }
@@ -46,7 +52,9 @@ export function useSectionNav() {
       return
     }
     if (router.currentRoute.value.hash) await router.replace({ name: 'home', hash: '' })
-    window.scrollTo({ top: 0, behavior: preferredScrollBehavior() })
+    const lenis = getLenis()
+    if (lenis) lenis.scrollTo(0)
+    else window.scrollTo({ top: 0, behavior: preferredScrollBehavior() })
     document.getElementById('top')?.focus({ preventScroll: true })
   }
 

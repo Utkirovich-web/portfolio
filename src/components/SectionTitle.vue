@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import GlowBackdrop from './GlowBackdrop.vue'
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
     /** id of the <h2>, referenced by the section's aria-labelledby. */
     titleId: string
@@ -12,6 +13,34 @@ withDefaults(
   }>(),
   { align: 'start' },
 )
+
+// The heading is revealed word by word, each word sliding up from behind a mask.
+const words = computed(() => props.title.split(' '))
+
+const heading = ref<HTMLElement | null>(null)
+// Words are only hidden once JS knows the heading is below the fold → no flash, no-JS safe.
+const armed = ref(false)
+const revealed = ref(false)
+let observer: IntersectionObserver | null = null
+
+onMounted(() => {
+  const el = heading.value
+  if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  if (el.getBoundingClientRect().top < window.innerHeight) return
+
+  armed.value = true
+  observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry?.isIntersecting) return
+      revealed.value = true
+      observer?.disconnect()
+    },
+    { rootMargin: '0px 0px -12% 0px' },
+  )
+  observer.observe(el)
+})
+
+onBeforeUnmount(() => observer?.disconnect())
 </script>
 
 <template>
@@ -21,7 +50,19 @@ withDefaults(
       <span class="section-title__line" aria-hidden="true" />
       {{ eyebrow }}
     </p>
-    <h2 :id="titleId" class="section-title__heading" data-reveal>{{ title }}</h2>
+    <h2
+      :id="titleId"
+      ref="heading"
+      class="section-title__heading"
+      :class="{ 'is-armed': armed, 'is-revealed': revealed }"
+    >
+      <template v-for="(word, index) in words" :key="`${title}-${index}`">
+        <span class="section-title__mask">
+          <span class="section-title__word" :style="{ '--i': index }">{{ word }}</span>
+        </span>
+        {{ index < words.length - 1 ? ' ' : '' }}
+      </template>
+    </h2>
     <p v-if="subtitle" class="section-title__subtitle" data-reveal>{{ subtitle }}</p>
   </header>
 </template>
@@ -65,6 +106,29 @@ withDefaults(
   font-size: clamp(2rem, 4.5vw, 3.25rem);
   font-weight: 800;
   letter-spacing: -0.035em;
+}
+
+.section-title__mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  // room for descenders and the negative letter-spacing overhang
+  padding: 0 0.04em 0.12em;
+  margin: 0 -0.04em -0.12em;
+}
+
+.section-title__word {
+  display: inline-block;
+  transition:
+    transform 1s var(--ease-out),
+    opacity 1s var(--ease-out);
+  transition-delay: calc(var(--i) * 70ms);
+}
+
+.is-armed:not(.is-revealed) .section-title__word {
+  opacity: 0;
+  transform: translateY(105%) rotate(4deg);
+  transform-origin: left bottom;
 }
 
 .section-title__subtitle {

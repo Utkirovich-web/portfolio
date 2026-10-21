@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, START_LOCATION } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import { getScrollOffset, preferredScrollBehavior } from '@/composables/useSectionNav'
+import { getLenis } from '@/composables/useSmoothScroll'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,13 @@ const router = createRouter({
     if (savedPosition) return savedPosition
 
     if (to.hash) {
+      // In-page navigation: let the smooth scroller glide there so the two don't fight.
+      const lenis = getLenis()
+      const target = document.querySelector<HTMLElement>(to.hash)
+      if (lenis && target && from !== START_LOCATION) {
+        lenis.scrollTo(target, { offset: -getScrollOffset() })
+        return false
+      }
       return {
         el: to.hash,
         top: getScrollOffset(),

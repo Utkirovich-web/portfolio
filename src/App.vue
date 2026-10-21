@@ -9,10 +9,12 @@ import ScrollProgress from '@/components/ScrollProgress.vue'
 import { useThemeStore } from '@/stores/theme'
 import { useLocaleStore } from '@/stores/locale'
 import { allSectionsRendered } from '@/composables/useProgressiveSections'
+import { useSmoothScroll } from '@/composables/useSmoothScroll'
 
 // Instantiating the stores applies the theme and syncs <html lang>, title and meta tags.
 useThemeStore()
 useLocaleStore()
+useSmoothScroll()
 
 const { t } = useI18n()
 const route = useRoute()

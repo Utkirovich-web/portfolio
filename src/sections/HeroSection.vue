@@ -5,7 +5,6 @@ import BaseButton from '@/components/BaseButton.vue'
 import BaseIcon from '@/components/BaseIcon.vue'
 import StatusBadge from '@/components/StatusBadge.vue'
 import GlowBackdrop from '@/components/GlowBackdrop.vue'
-import HeroGlobe from '@/components/HeroGlobe.vue'
 import { profile } from '@/data/profile'
 import { useSectionNav } from '@/composables/useSectionNav'
 
@@ -48,7 +47,6 @@ onBeforeUnmount(() => {
     <div class="hero__bg" aria-hidden="true">
       <div class="hero__grid" />
       <GlowBackdrop variant="hero" />
-      <HeroGlobe />
     </div>
 
     <div class="hero__inner container">

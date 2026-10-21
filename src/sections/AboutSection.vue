@@ -17,7 +17,7 @@ const { t } = useI18n()
         :title="t('about.title')"
       />
 
-      <div class="about__grid">
+      <div class="about__grid" data-skew>
         <figure class="about__profile surface-card" data-reveal>
           <AvatarImage class="about__avatar" :alt="t('about.avatarAlt')" />
           <figcaption>

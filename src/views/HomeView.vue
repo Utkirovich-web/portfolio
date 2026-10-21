@@ -8,6 +8,8 @@ import ExperienceSection from '@/sections/ExperienceSection.vue'
 import ContactSection from '@/sections/ContactSection.vue'
 import { useProgressiveSections } from '@/composables/useProgressiveSections'
 import { useScrollReveal } from '@/composables/useScrollReveal'
+import { useScrollSkew } from '@/composables/useScrollSkew'
+import ParticleField from '@/components/ParticleField.vue'
 
 // Below-the-fold sections, in page order.
 const sections = [AboutSection, SkillsSection, ProjectsSection, ExperienceSection, ContactSection]
@@ -20,9 +22,11 @@ const { isRendered, allRendered } = useProgressiveSections(sections.length, {
 })
 
 useScrollReveal('[data-reveal]', allRendered)
+useScrollSkew()
 </script>
 
 <template>
+  <ParticleField />
   <HeroSection />
   <template v-for="(section, index) in sections" :key="index">
     <component :is="section" v-if="isRendered(index)" />

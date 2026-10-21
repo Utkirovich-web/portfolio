@@ -22,6 +22,26 @@ body::after {
   opacity: var(--grain-opacity);
 }
 
+// Smooth scroll (Lenis) — required base rules
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+// Elements marked [data-skew] lean slightly with the scroll speed (see useScrollSkew).
+[data-skew] {
+  transform: skewY(var(--scroll-skew, 0deg));
+  transform-origin: center top;
+}
+
 // Cross-fade colors for ~250ms while the theme changes (class toggled by the theme store).
 @media (prefers-reduced-motion: no-preference) {
   :root.theme-transition,
