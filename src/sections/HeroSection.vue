@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import BaseButton from '@/components/BaseButton.vue'
 import BaseIcon from '@/components/BaseIcon.vue'
 import StatusBadge from '@/components/StatusBadge.vue'
 import GlowBackdrop from '@/components/GlowBackdrop.vue'
+import HeroGlobe from '@/components/HeroGlobe.vue'
 import { profile } from '@/data/profile'
 import { useSectionNav } from '@/composables/useSectionNav'
 
@@ -13,13 +14,41 @@ const { goTo } = useSectionNav()
 
 // Each word is revealed separately (CSS-only, so it never delays the first paint).
 const nameWords = computed(() => t('profile.name').split(' '))
+
+// Scroll parallax: exposes 0 → 1 as the hero scrolls out, consumed in CSS via --hero-progress.
+const hero = ref<HTMLElement | null>(null)
+let rafId = 0
+
+function updateProgress() {
+  rafId = 0
+  const el = hero.value
+  if (!el) return
+  const progress = Math.min(Math.max(window.scrollY / el.offsetHeight, 0), 1)
+  el.style.setProperty('--hero-progress', progress.toFixed(3))
+}
+
+function onScroll() {
+  if (!rafId) rafId = requestAnimationFrame(updateProgress)
+}
+
+onMounted(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  updateProgress()
+  window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  cancelAnimationFrame(rafId)
+  window.removeEventListener('scroll', onScroll)
+})
 </script>
 
 <template>
-  <section id="top" class="hero" aria-labelledby="hero-title" tabindex="-1">
+  <section id="top" ref="hero" class="hero" aria-labelledby="hero-title" tabindex="-1">
     <div class="hero__bg" aria-hidden="true">
       <div class="hero__grid" />
       <GlowBackdrop variant="hero" />
+      <HeroGlobe />
     </div>
 
     <div class="hero__inner container">
@@ -105,6 +134,9 @@ const nameWords = computed(() => t('profile.name').split(' '))
   position: absolute;
   inset: 0;
   z-index: -1;
+  // Background moves slower than the page and gently zooms → depth
+  transform: translateY(calc(var(--hero-progress, 0) * 30%))
+    scale(calc(1 + var(--hero-progress, 0) * 0.12));
 }
 
 .hero__grid {
@@ -124,6 +156,9 @@ const nameWords = computed(() => t('profile.name').split(' '))
   align-items: center;
   gap: var(--space-3);
   text-align: center;
+  // Content lifts away and fades as the hero scrolls out
+  opacity: calc(1 - var(--hero-progress, 0) * 1.4);
+  transform: translateY(calc(var(--hero-progress, 0) * -80px));
 }
 
 .hero__title {
