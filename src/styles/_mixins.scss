@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+// Auto-injected into every SCSS file and <style lang="scss"> block (see vite.config.ts).
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 960px,
+  xl: 1200px,
+);
+
+/// Mobile-first media query: `@include up(md) { ... }`
+@mixin up($bp) {
+  @media (min-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+
+/// Hover styles only for devices that can actually hover (no sticky hover on touch).
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

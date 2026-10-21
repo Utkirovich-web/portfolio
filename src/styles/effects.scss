@@ -1,0 +1,51 @@
+// Global visual effects: grain overlay, theme cross-fade, reduced-motion guard.
+
+// Theme background gradient, pinned to the viewport so it doesn't stretch over the page height.
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--bg-gradient);
+}
+
+// Film grain over the whole page (static texture, never intercepts the pointer).
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  background-image: url('@/assets/textures/noise.svg');
+  background-size: 200px 200px;
+  opacity: var(--grain-opacity);
+}
+
+// Cross-fade colors for ~250ms while the theme changes (class toggled by the theme store).
+@media (prefers-reduced-motion: no-preference) {
+  :root.theme-transition,
+  :root.theme-transition *,
+  :root.theme-transition *::before,
+  :root.theme-transition *::after {
+    transition-property:
+      background-color, border-color, color, fill, stroke, stop-color, box-shadow, outline-color !important;
+    transition-duration: 250ms !important;
+    transition-timing-function: ease !important;
+    transition-delay: 0s !important;
+  }
+}
+
+// Respect reduced motion everywhere: animations jump to their end state.
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}

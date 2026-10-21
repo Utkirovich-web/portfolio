@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Shohjahon Abdusamadov — Frontend Developer",
+    "description": "Frontend developer from Tashkent building fast, accessible interfaces with Vue 3 and TypeScript for government web platforms. Open to job offers.",
+    "ogLocale": "en_US"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "homeLink": "Shohjahon Abdusamadov — back to top",
+    "primaryNav": "Primary",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "themeButton": "Theme: {theme}. Change theme",
+    "newTab": "(opens in a new tab)",
+    "socialLinks": "Social links",
+    "projectFilters": "Filter projects by category",
+    "keyFacts": "Key facts"
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "aurora": "Aurora",
+    "system": "System"
+  },
+  "lang": {
+    "label": "Language",
+    "uz": "Oʻzbekcha",
+    "en": "English",
+    "ru": "Русский"
+  },
+  "profile": {
+    "name": "Shohjahon Abdusamadov",
+    "fullName": "Shohjahon Abdusamadov O'tkirovich",
+    "role": "Frontend Developer",
+    "location": "Tashkent, Uzbekistan"
+  },
+  "hero": {
+    "status": "Open to offers",
+    "role": "Frontend Developer",
+    "stack": "Vue 3 · TypeScript",
+    "value": "Building fast, accessible interfaces for government web platforms.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact me",
+    "scrollHint": "Scroll"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Interfaces that are fast, clear and built to last",
+    "bio1": "I'm a frontend developer from Tashkent who builds fast, accessible interfaces with Vue 3 and TypeScript.",
+    "bio2": "At the IT Center of the Ministry of Economy and Finance of Uzbekistan I work on government web platforms — optimizing existing public websites, shipping new features and building internal admin panels.",
+    "bio3": "I'm finishing my Software Engineering degree at Turin Polytechnic University in Tashkent and expanding into Next.js, Nuxt.js, backend development and cybersecurity.",
+    "fullNameLabel": "Full name",
+    "roleLabel": "Role",
+    "locationLabel": "Based in",
+    "avatarAlt": "Portrait of Shohjahon Abdusamadov",
+    "facts": {
+      "projects": {
+        "title": "6 production projects",
+        "detail": "2 public websites · 4 admin panels"
+      },
+      "position": {
+        "title": "Frontend Intern",
+        "detail": "IT Center, Ministry of Economy and Finance"
+      },
+      "education": {
+        "title": "Software Engineering",
+        "detail": "TTPU · 2022–2026"
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "The stack I work with every day",
+    "subtitle": "A focused toolset for building reliable, maintainable interfaces.",
+    "categories": {
+      "frontend": "Frontend",
+      "ecosystem": "Ecosystem",
+      "tools": "Tools",
+      "learning": "Learning now"
+    },
+    "descriptions": {
+      "frontend": "Core languages and styling",
+      "ecosystem": "Libraries I ship to production",
+      "tools": "Workflow, versioning and delivery",
+      "learning": "Where I'm growing next"
+    },
+    "items": {
+      "backend": "Backend development",
+      "cybersecurity": "Cybersecurity"
+    },
+    "inProgress": "In progress"
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Selected work",
+    "subtitle": "All projects are systems of the Ministry of Economy and Finance of the Republic of Uzbekistan.",
+    "filters": {
+      "all": "All",
+      "public": "Public websites",
+      "admin": "Admin panels"
+    },
+    "showing": "Showing {count} projects",
+    "org": "Ministry of Economy and Finance",
+    "liveWebsite": "Live website",
+    "internalBadge": "Internal system",
+    "confidential": "Internal administrative system. Details are confidential.",
+    "techLabel": "Technologies",
+    "items": {
+      "green": {
+        "title": "Green Economy Platform",
+        "description": "Public platform for Uzbekistan's green economy program. Joined an existing codebase; working on performance optimization, UI refinements and new features."
+      },
+      "audit": {
+        "title": "Audit Portal",
+        "description": "Public audit portal. Took over the existing project; improving performance, refining the UI and adding new functionality."
+      },
+      "greenAdmin": {
+        "title": "Green Economy Platform Admin Panel"
+      },
+      "auditAdmin": {
+        "title": "Audit Portal Admin Panel"
+      },
+      "breedAdmin": {
+        "title": "State Inspection for Breed Quality Control Admin Panel"
+      },
+      "monitoringAdmin": {
+        "title": "Monitoring Portal Admin Panel"
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I work and study",
+    "subtitle": "From university lectures to government systems in production.",
+    "current": "Current",
+    "types": {
+      "work": "Work",
+      "education": "Education"
+    },
+    "items": {
+      "itc": {
+        "period": "March 2026 — present",
+        "role": "Frontend Intern",
+        "org": "Frontend Department, Information Technology Center under the Ministry of Economy and Finance of the Republic of Uzbekistan",
+        "points": {
+          "websites": "Optimizing and extending the public websites green.imv.uz and audit.imv.uz (inherited codebases)",
+          "admin": "Building and maintaining four internal admin panels for ministry systems",
+          "team": "Working in a team with GitLab, merge requests, code review and CI/CD"
+        }
+      },
+      "ttpu": {
+        "period": "2022 — 2026",
+        "role": "Software Engineering student",
+        "org": "Turin Polytechnic University in Tashkent (TTPU)"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's work together",
+    "subtitle": "I'm open to frontend roles and interesting projects. Send me a message and I'll get back to you.",
+    "cardsTitle": "Or reach me directly",
+    "cards": {
+      "email": "Email",
+      "telegram": "Telegram",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you{'@'}example.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about the role or project…",
+      "submit": "Send message",
+      "note": "The form opens your email app with the message ready to send.",
+      "subject": "Portfolio inquiry from {name}",
+      "success": "Your email app should open now. If it didn't, write to me directly by email or Telegram.",
+      "errorSummary": "Please fix the highlighted fields.",
+      "errors": {
+        "nameRequired": "Please enter your name.",
+        "nameShort": "Name should be at least 2 characters.",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageRequired": "Please write a message.",
+        "messageShort": "Message should be at least {min} characters."
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Vue 3 and TypeScript.",
+    "backToTop": "Back to top"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist or has been moved.",
+    "back": "Back to home"
+  }
+}

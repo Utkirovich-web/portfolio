@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Shohjahon Abdusamadov — Frontend dasturchi",
+    "description": "Toshkentlik frontend dasturchi. Davlat veb-platformalari uchun Vue 3 va TypeScript asosida tez va qulay interfeyslar yarataman. Ish takliflariga ochiqman.",
+    "ogLocale": "uz_UZ"
+  },
+  "a11y": {
+    "skipToContent": "Asosiy kontentga oʻtish",
+    "homeLink": "Shohjahon Abdusamadov — sahifa boshiga",
+    "primaryNav": "Asosiy navigatsiya",
+    "openMenu": "Menyuni ochish",
+    "closeMenu": "Menyuni yopish",
+    "themeButton": "Mavzu: {theme}. Mavzuni oʻzgartirish",
+    "newTab": "(yangi oynada ochiladi)",
+    "socialLinks": "Ijtimoiy tarmoqlar",
+    "projectFilters": "Loyihalarni turkum boʻyicha saralash",
+    "keyFacts": "Asosiy faktlar"
+  },
+  "nav": {
+    "about": "Men haqimda",
+    "skills": "Koʻnikmalar",
+    "projects": "Loyihalar",
+    "experience": "Tajriba",
+    "contact": "Aloqa"
+  },
+  "theme": {
+    "label": "Mavzu",
+    "light": "Yorugʻ",
+    "dark": "Qorongʻi",
+    "aurora": "Aurora",
+    "system": "Tizim"
+  },
+  "lang": {
+    "label": "Til",
+    "uz": "Oʻzbekcha",
+    "en": "English",
+    "ru": "Русский"
+  },
+  "profile": {
+    "name": "Shohjahon Abdusamadov",
+    "fullName": "Shohjahon Abdusamadov Oʻtkirovich",
+    "role": "Frontend dasturchi",
+    "location": "Toshkent, Oʻzbekiston"
+  },
+  "hero": {
+    "status": "Takliflarga ochiqman",
+    "role": "Frontend dasturchi",
+    "stack": "Vue 3 · TypeScript",
+    "value": "Davlat veb-platformalari uchun tez va qulay interfeyslar yarataman.",
+    "ctaProjects": "Loyihalarni koʻrish",
+    "ctaContact": "Bogʻlanish",
+    "scrollHint": "Pastga"
+  },
+  "about": {
+    "eyebrow": "Men haqimda",
+    "title": "Tez, tushunarli va puxta interfeyslar",
+    "bio1": "Men toshkentlik frontend dasturchiman. Vue 3 va TypeScript yordamida tez ishlaydigan va hamma uchun qulay interfeyslar yarataman.",
+    "bio2": "Oʻzbekiston Iqtisodiyot va moliya vazirligi huzuridagi Axborot texnologiyalari markazida davlat veb-platformalari ustida ishlayman: mavjud ommaviy saytlarni optimallashtiraman, yangi funksiyalarni joriy qilaman va ichki admin panellarni ishlab chiqaman.",
+    "bio3": "Hozir Toshkentdagi Turin politexnika universitetida Dasturiy injiniring yoʻnalishi boʻyicha tahsilimni yakunlayapman hamda Next.js, Nuxt.js, backend dasturlash va kiberxavfsizlik sohalarida bilimimni kengaytiryapman.",
+    "fullNameLabel": "Toʻliq ism",
+    "roleLabel": "Mutaxassislik",
+    "locationLabel": "Joylashuv",
+    "avatarAlt": "Shohjahon Abdusamadov portreti",
+    "facts": {
+      "projects": {
+        "title": "6 ta real loyiha",
+        "detail": "2 ta ommaviy sayt · 4 ta admin panel"
+      },
+      "position": {
+        "title": "Frontend amaliyotchi",
+        "detail": "Iqtisodiyot va moliya vazirligi huzuridagi AT markazi"
+      },
+      "education": {
+        "title": "Dasturiy injiniring",
+        "detail": "TTPU · 2022–2026"
+      }
+    }
+  },
+  "skills": {
+    "eyebrow": "Koʻnikmalar",
+    "title": "Har kuni ishlatadigan texnologiyalarim",
+    "subtitle": "Ishonchli va qoʻllab-quvvatlash oson interfeyslar uchun puxta tanlangan vositalar.",
+    "categories": {
+      "frontend": "Frontend",
+      "ecosystem": "Ekotizim",
+      "tools": "Vositalar",
+      "learning": "Hozir oʻrganyapman"
+    },
+    "descriptions": {
+      "frontend": "Asosiy tillar va stillar",
+      "ecosystem": "Real loyihalarda qoʻllaydigan kutubxonalarim",
+      "tools": "Ish jarayoni, versiyalash va yetkazib berish",
+      "learning": "Keyingi rivojlanish yoʻnalishlarim"
+    },
+    "items": {
+      "backend": "Backend dasturlash",
+      "cybersecurity": "Kiberxavfsizlik"
+    },
+    "inProgress": "Jarayonda"
+  },
+  "projects": {
+    "eyebrow": "Loyihalar",
+    "title": "Tanlangan ishlar",
+    "subtitle": "Barcha loyihalar Oʻzbekiston Respublikasi Iqtisodiyot va moliya vazirligi tizimlaridir.",
+    "filters": {
+      "all": "Barchasi",
+      "public": "Ommaviy saytlar",
+      "admin": "Admin panellar"
+    },
+    "showing": "{count} ta loyiha koʻrsatilmoqda",
+    "org": "Iqtisodiyot va moliya vazirligi",
+    "liveWebsite": "Saytni ochish",
+    "internalBadge": "Ichki tizim",
+    "confidential": "Ichki boshqaruv tizimi. Tafsilotlar maxfiy.",
+    "techLabel": "Texnologiyalar",
+    "items": {
+      "green": {
+        "title": "Yashil iqtisodiyot platformasi",
+        "description": "Oʻzbekistonning yashil iqtisodiyot dasturi uchun ommaviy platforma. Mavjud kod bazasiga qoʻshildim: unumdorlikni optimallashtirish, interfeysni takomillashtirish va yangi funksiyalar ustida ishlayapman."
+      },
+      "audit": {
+        "title": "Audit portali",
+        "description": "Ommaviy audit portali. Mavjud loyihani qabul qilib oldim: unumdorlikni oshiryapman, interfeysni sayqallayapman va yangi imkoniyatlar qoʻshyapman."
+      },
+      "greenAdmin": {
+        "title": "Yashil iqtisodiyot platformasi admin paneli"
+      },
+      "auditAdmin": {
+        "title": "Audit portali admin paneli"
+      },
+      "breedAdmin": {
+        "title": "Naslchilik sifatini nazorat qilish davlat inspeksiyasi admin paneli"
+      },
+      "monitoringAdmin": {
+        "title": "Monitoring portali admin paneli"
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Tajriba",
+    "title": "Ish va taʼlim yoʻlim",
+    "subtitle": "Universitet auditoriyasidan real davlat tizimlarigacha.",
+    "current": "Hozir",
+    "types": {
+      "work": "Ish",
+      "education": "Taʼlim"
+    },
+    "items": {
+      "itc": {
+        "period": "Mart 2026 — hozirgacha",
+        "role": "Frontend amaliyotchi",
+        "org": "Oʻzbekiston Respublikasi Iqtisodiyot va moliya vazirligi huzuridagi Axborot texnologiyalari markazi, Frontend boʻlimi",
+        "points": {
+          "websites": "green.imv.uz va audit.imv.uz ommaviy saytlarini (meros qolgan kod bazalari) optimallashtirish va rivojlantirish",
+          "admin": "Vazirlik tizimlari uchun toʻrtta ichki admin panelni ishlab chiqish va qoʻllab-quvvatlash",
+          "team": "Jamoada ishlash: GitLab, merge requestlar, code review va CI/CD"
+        }
+      },
+      "ttpu": {
+        "period": "2022 — 2026",
+        "role": "Dasturiy injiniring talabasi",
+        "org": "Toshkentdagi Turin politexnika universiteti (TTPU)"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Aloqa",
+    "title": "Keling, birga ishlaymiz",
+    "subtitle": "Frontend lavozimlari va qiziqarli loyihalarga ochiqman. Xabar yuboring — albatta javob beraman.",
+    "cardsTitle": "Yoki toʻgʻridan-toʻgʻri bogʻlaning",
+    "cards": {
+      "email": "Email",
+      "telegram": "Telegram",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    },
+    "form": {
+      "name": "Ism",
+      "namePlaceholder": "Ismingiz",
+      "email": "Email",
+      "emailPlaceholder": "siz{'@'}example.com",
+      "message": "Xabar",
+      "messagePlaceholder": "Lavozim yoki loyiha haqida yozing…",
+      "submit": "Xabar yuborish",
+      "note": "Forma xabaringiz tayyor holda pochta ilovangizni ochadi.",
+      "subject": "Portfolio orqali xabar: {name}",
+      "success": "Pochta ilovangiz ochilishi kerak. Agar ochilmasa, menga email yoki Telegram orqali toʻgʻridan-toʻgʻri yozing.",
+      "errorSummary": "Iltimos, belgilangan maydonlarni toʻgʻrilang.",
+      "errors": {
+        "nameRequired": "Iltimos, ismingizni kiriting.",
+        "nameShort": "Ism kamida 2 ta belgidan iborat boʻlishi kerak.",
+        "emailRequired": "Iltimos, email manzilingizni kiriting.",
+        "emailInvalid": "Iltimos, toʻgʻri email manzilini kiriting.",
+        "messageRequired": "Iltimos, xabar yozing.",
+        "messageShort": "Xabar kamida {min} ta belgidan iborat boʻlishi kerak."
+      }
+    }
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan.",
+    "builtWith": "Vue 3 va TypeScript bilan yaratilgan.",
+    "backToTop": "Yuqoriga qaytish"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "text": "Siz qidirayotgan sahifa mavjud emas yoki koʻchirilgan.",
+    "back": "Bosh sahifaga qaytish"
+  }
+}

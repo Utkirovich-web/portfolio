@@ -1,0 +1,50 @@
+{
+  "name": "shohjahon-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal portfolio of Shohjahon Abdusamadov — Frontend Developer (Vue.js)",
+  "author": "Shohjahon Abdusamadov <shohjahonabdusamadov07@gmail.com>",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --build && vite build",
+    "build-only": "vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --build",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/",
+    "generate:icons": "node scripts/generate-icons.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@vueuse/core": "^14.4.0",
+    "gsap": "^3.15.0",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.22",
+    "vue-i18n": "^11.4.14",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^11.2.5",
+    "@tsconfig/node22": "^22.0.6",
+    "@types/node": "^22.20.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "@vue/tsconfig": "^0.8.1",
+    "eslint": "^9.39.5",
+    "eslint-plugin-vue": "^10.11.1",
+    "prettier": "^3.9.10",
+    "sass-embedded": "^1.105.1",
+    "sharp": "^0.35.5",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.7",
+    "vue-tsc": "^3.3.13"
+  }
+}

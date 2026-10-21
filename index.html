@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Shohjahon Abdusamadov — Frontend Developer</title>
+    <meta
+      name="description"
+      content="Frontend developer from Tashkent building fast, accessible interfaces with Vue 3 and TypeScript for government web platforms. Open to job offers."
+    />
+    <meta name="author" content="Shohjahon Abdusamadov" />
+    <meta name="theme-color" content="#FAFAFA" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+
+    <!--
+      Theme + language bootstrap. Runs synchronously before the first paint so the
+      saved theme is applied immediately (no flash of the wrong theme).
+      Keys and values must stay in sync with src/stores/theme.ts and src/plugins/i18n.ts.
+    -->
+    <script>
+      ;(function () {
+        var root = document.documentElement
+        var colors = { light: '#FAFAFA', dark: '#0A0A0A', aurora: '#B8CFD0' }
+        var prefersDark = function () {
+          return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        }
+        var theme = prefersDark() ? 'dark' : 'light'
+        try {
+          var saved = localStorage.getItem('sa-theme')
+          if (saved === 'light' || saved === 'dark' || saved === 'aurora') theme = saved
+          var lang = localStorage.getItem('sa-locale')
+          if (lang === 'uz' || lang === 'en' || lang === 'ru') root.lang = lang
+        } catch (e) {}
+        root.setAttribute('data-theme', theme)
+        var meta = document.querySelector('meta[name="theme-color"]')
+        if (meta) meta.setAttribute('content', colors[theme])
+      })()
+    </script>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shohjahon Abdusamadov" />
+    <meta property="og:title" content="Shohjahon Abdusamadov — Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Frontend developer from Tashkent building fast, accessible interfaces with Vue 3 and TypeScript for government web platforms. Open to job offers."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shohjahon Abdusamadov — Frontend Developer" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="uz_UZ" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shohjahon Abdusamadov — Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Frontend developer from Tashkent building fast, accessible interfaces with Vue 3 and TypeScript for government web platforms."
+    />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shohjahon Abdusamadov",
+        "alternateName": ["Shohjahon Abdusamadov O'tkirovich", "Шохжахон Абдусамадов"],
+        "jobTitle": "Frontend Developer",
+        "url": "%VITE_SITE_URL%/",
+        "email": "mailto:shohjahonabdusamadov07@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Tashkent", "addressCountry": "UZ" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Turin Polytechnic University in Tashkent" },
+        "knowsAbout": ["Vue.js", "TypeScript", "JavaScript", "Frontend development", "Web accessibility"],
+        "sameAs": ["https://github.com/Utkirovich-web", "https://t.me/shoh_01", "https://instagram.com/utkirov1ch__"]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p style="padding: 24px; font-family: system-ui, sans-serif">
+        Shohjahon Abdusamadov — Frontend Developer. Please enable JavaScript to view this site, or
+        write to shohjahonabdusamadov07@gmail.com.
+      </p>
+    </noscript>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
